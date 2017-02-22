@@ -15,8 +15,8 @@ Category.create(name:'Cat 2')
 Category.create(name:'Cat 3')
 
 User.create(name:'user1', email:'asdf@algo.cl')
-User.create(name:'user2', email:'asdf@algo.cl')
-User.create(name:'user3', email:'asdf@algo.cl')
+User.create(name:'user2', email:'asdsf@algo.cl')
+User.create(name:'user3', email:'asdssf@algo.cl')
 
 Item.create(serial_number:123, size:10, description:'description one', category_id: Category.find_by(name:'Cat 1').id, user_id: User.find_by(name:'user1').id)
 Item.create(serial_number:456, size:20, description:'description two', category_id: Category.find_by(name:'Cat 2').id, user_id: User.find_by(name:'user2').id)
