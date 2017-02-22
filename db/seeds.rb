@@ -8,11 +8,16 @@
 
 Item.destroy_all
 Category.destroy_all
+User.destroy_all
 
-Category.create(name:'categoria 1')
-Category.create(name:'categoria 2')
-Category.create(name:'categoria 3')
+Category.create(name:'Cat 1')
+Category.create(name:'Cat 2')
+Category.create(name:'Cat 3')
 
-Item.create(serialnumber:23,size:100,description:'soy un item de calidad',category_id:Category.last)
-Item.create(serialnumber:234,size:150,description:'soy un item penca',category_id:Category.last)
-Item.create(serialnumber:34,size:1450,description:'soy un item shuer loco',category_id:Category.last)
+User.create(name:'user1', email:'asdf@algo.cl')
+User.create(name:'user2', email:'asdf@algo.cl')
+User.create(name:'user3', email:'asdf@algo.cl')
+
+Item.create(serial_number:123, size:10, description:'description one', category_id: Category.find_by(name:'Cat 1').id, user_id: User.find_by(name:'Jpcl').id)
+Item.create(serial_number:456, size:20, description:'description two', category_id: Category.find_by(name:'Cat 2').id, user_id: User.find_by(name:'Jp').id)
+Item.create(serial_number:789, size:30, description:'description three', category_id: Category.find_by(name:'Cat 3').id, user_id: User.find_by(name:'Cl').id)
