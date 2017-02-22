@@ -1,0 +1,20 @@
+<h1>Works#index</h1>
+<p>Find me in app/views/works/index.html.erb</p>
+
+
+<table>
+	<tr>
+		<td>Item serial</td>
+		<td>Category</td>
+		<td>User</td>
+	</tr>
+	<% @i.each do |elem| %>
+		<tr>
+			<td><%= elem.serialnumber %></td>
+			<td><%= elem.category.name %></td>
+			<td><%= elem.user %></td>
+			<td><%= link_to 'Destroy', works_delete_path(id: elem.id),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+</table>
